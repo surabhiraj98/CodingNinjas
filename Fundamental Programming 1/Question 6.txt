@@ -1,0 +1,46 @@
+//Number Pattern 2
+Print the following pattern
+Pattern for N = 4
+       1
+     23
+   345
+ 4567
+Input Format :
+N (Total no. of rows)
+Output Format :
+Pattern in N lines
+Sample Input :
+5
+Sample Output :
+          1
+        23
+      345
+    4567
+  56789//
+
+import java.util.Scanner;
+public class Solution {
+	public static void main(String[] args) {
+			Scanner scanner = new Scanner(System.in);
+			
+			int n = scanner.nextInt();
+			int i = 1;
+			while (i <= n) {
+				int space = 1;
+				while (space <= (n - i)) {
+					System.out.print(" ");
+					space++;
+				}
+				int j = 1, val = i;
+				while (j <= i) {
+					System.out.print(val);
+					j++;
+					val++;
+				}
+				System.out.println();
+				i++;
+			}
+	}
+}
+
+

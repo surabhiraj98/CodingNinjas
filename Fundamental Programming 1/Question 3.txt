@@ -1,0 +1,29 @@
+//Sum of Even Numbers till N
+Given a number N, print sum of all even numbers from 1 to N.
+Input Format :
+Integer N
+Output Format :
+Required Sum 
+Sample Input 1 :
+ 6
+Sample Output 1 :
+12//
+
+import java.util.Scanner;
+public class Solution {
+	public static void main(String[] args) {
+    int sum=0;
+    	Scanner s = new Scanner(System.in);
+		int N = s.nextInt();
+    	for(int i=0; i<=N; i=i+2){
+    		sum = sum + i;
+    	}
+    	System.out.println(sum);
+    	}
+}
+		
+	
+
+
+
+

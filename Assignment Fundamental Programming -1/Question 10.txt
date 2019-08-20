@@ -1,0 +1,45 @@
+Number Pattern
+Print the following pattern for the given N number of rows.
+Pattern for N = 4
+1234
+123
+12
+1
+Input format :
+Integer N (Total no. of rows)
+Output format :
+Pattern in N lines
+Sample Input :
+5
+Sample Output :
+12345
+1234
+123
+12
+1
+
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+Scanner s = new Scanner(System.in);
+	    int a = s.nextInt();
+	    int i =1;
+	    int temp =a;
+	    while(i<=a)
+	    {
+	      int j=1;
+	      while(j<=temp)
+	      {
+	          System.out.print(j);
+	          j+=1;
+	      }
+	      i+=1;
+	      temp-=1;
+	      System.out.print("\n");
+}
+	}
+}
+
+

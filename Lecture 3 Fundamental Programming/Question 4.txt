@@ -1,0 +1,79 @@
+Arrow Pattern
+
+Print the following pattern for the given number of rows.
+Assume N is always odd.
+Note : There is space after every star.
+Pattern for N = 7
+*
+ * *
+   * * *
+     * * * *
+   * * *
+ * *
+*
+Input format :
+Integer N (Total no. of rows)
+Output format :
+Pattern in N lines
+Sample Input :
+11
+Sample Output :
+*
+ * *
+   * * *
+     * * * *
+       * * * * *
+         * * * * * *
+       * * * * *
+     * * * *
+   * * *
+ * *
+*
+
+import java.util.Scanner;
+public class Solution {
+	public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+		int a = s.nextInt();
+		int i=1;
+		int l=(a/2)+1;
+		int nex=a-l;
+		while(i<=l)
+		{
+			int j=1;
+			while(j<i)
+			{
+				System.out.print(" ");
+				j+=1;
+			}
+			j=1;
+			while(j<=i)
+			{
+				System.out.print("* ");
+				j+=1;
+			}
+			i+=1;
+			System.out.print("\n");
+		}
+		i=nex;
+		while(i>=1)
+		{
+			int j=1;
+			while(j<i)
+			{
+				System.out.print(" ");
+				j+=1;
+			}
+			j=1;
+			while(j<=i)
+			{
+				System.out.print("* ");
+				j+=1;
+			}
+			i-=1;
+			System.out.print("\n");
+		}
+	}
+}
+
+

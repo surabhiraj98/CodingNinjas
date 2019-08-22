@@ -1,0 +1,47 @@
+All Prime Numbers
+Given an integer N, print all the prime numbers that lies in between 2 to N (both inclusive).
+Print the prime numbers in different lines.
+Input Format :
+Integer N
+Output Format :
+Prime number in different lines
+Constraints :
+1 <= N <= 100
+Sample Input :
+9
+Sample Output :
+2
+3
+5
+7
+
+import java.util.Scanner;
+public class Solution {
+public static boolean checkPrime(int x) {
+        boolean Prime = true;
+        for (int i = 2; i < x; i++) {
+            if (x % i == 0) {
+                Prime = false;
+                break;
+            }
+        }
+        return Prime;
+    }
+	public static void main(String[] args) {
+		
+		/* Your class should be named Solution.
+	 	* Read input as specified in the question.
+	 	* Print output as specified in the question.
+		*/
+Scanner s = new Scanner(System.in);
+    int N = s.nextInt();
+    boolean Prime;
+    for (int i = 2; i <= N; i++) {
+        Prime = checkPrime(i);
+        if (Prime == true) {
+            System.out.println(i);
+        }
+    }
+}	}
+
+
